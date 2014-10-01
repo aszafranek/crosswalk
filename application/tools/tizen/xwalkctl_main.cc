@@ -112,7 +112,7 @@ bool list_applications(ApplicationStorage* storage) {
   for (unsigned i = 0; i < app_ids.size(); ++i) {
     scoped_refptr<ApplicationData> app_data =
         storage->GetApplicationData(app_ids.at(i));
-    if (!app_data) {
+    if (!app_data.get()) {
       g_print("Failed to obtain app data for xwalk id: %s\n",
               app_ids.at(i).c_str());
       continue;

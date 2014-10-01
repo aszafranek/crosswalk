@@ -306,7 +306,7 @@ void XWalkContentBrowserClient::RequestGeolocationPermission(
     base::Callback<void(bool)> result_callback,
     base::Closure* cancel_callback) {
 #if defined(OS_ANDROID) || defined(OS_TIZEN)
-  if (!geolocation_permission_context_) {
+  if (!geolocation_permission_context_.get()) {
     geolocation_permission_context_ =
       new RuntimeGeolocationPermissionContext();
   }
