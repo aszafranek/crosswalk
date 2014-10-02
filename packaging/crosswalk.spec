@@ -12,7 +12,11 @@
 # are not present.
 %define _disable_nacl 1
 %else
-%define _disable_nacl 0
+# Since M39, Google has stopped shipping a 32-bit PNaCl toolchain, so we cannot
+# build NaCl on a fully 32-bit host anymore. See
+# https://groups.google.com/a/chromium.org/forum/#!topic/chromium-packagers/mxPyPeoMwxk
+# and https://code.google.com/p/chromium/issues/detail?id=416235
+%define _disable_nacl 1
 %endif
 
 # adjust compression algorithm to speed up RPMS creation
