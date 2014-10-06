@@ -20,7 +20,7 @@
 chromium_crosswalk_rev = '7374522f279a5a5a226751ae5684239f98b60376'
 blink_crosswalk_rev = '1e8593ae2b04614c3ceef71cb336612d5412f6de'
 v8_crosswalk_rev = '2778befa7cee5524d358dc369f4b5066d71eddb2'
-ozone_wayland_rev = 'de14a9cc042d26784fc0ff723c6c17bff6b6b1cf'
+ozone_wayland_rev = '6f1674ee4d554444cd5c48a3665b61d20be210b8'
 
 crosswalk_git = 'https://github.com/crosswalk-project'
 ozone_wayland_git = 'https://github.com/01org'
