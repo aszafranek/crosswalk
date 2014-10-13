@@ -453,7 +453,8 @@ ApplicationProtocolHandler::MaybeCreateJob(
   }
 
   std::list<std::string> locales;
-  if (application.get() && application->manifest_type() == Manifest::TYPE_WIDGET) {
+  if (application.get() &&
+      application->manifest_type() == Manifest::TYPE_WIDGET) {
     GetUserAgentLocales(GetSystemLocale(), locales);
     GetUserAgentLocales(application->GetManifest()->default_locale(), locales);
   }

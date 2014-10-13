@@ -162,7 +162,8 @@ void XWalkDevToolsDelegate::EnumerateTargets(TargetCallback callback) {
         content::DevToolsAgentHost::GetOrCreateAll();
     for (content::DevToolsAgentHost::List::iterator it = agents.begin();
          it != agents.end(); ++it) {
-    Runtime* runtime = static_cast<Runtime*>((*it)->GetWebContents()->GetDelegate());
+    Runtime* runtime =
+        static_cast<Runtime*>((*it)->GetWebContents()->GetDelegate());
     if (runtime && runtime->remote_debugging_enabled())
       targets.push_back(new Target(*it));
   }

@@ -22,7 +22,8 @@ namespace xwalk {
 
 class RuntimeContext;
 
-class XWalkDevToolsHttpHandlerDelegate : public content::DevToolsHttpHandlerDelegate {
+class XWalkDevToolsHttpHandlerDelegate :
+    public content::DevToolsHttpHandlerDelegate {
  public:
   XWalkDevToolsHttpHandlerDelegate();
   virtual ~XWalkDevToolsHttpHandlerDelegate();
@@ -58,7 +59,7 @@ class XWalkDevToolsDelegate : public content::DevToolsManagerDelegate {
   virtual void EnumerateTargets(TargetCallback callback) OVERRIDE;
   virtual std::string GetPageThumbnailData(const GURL& url) OVERRIDE;
 
-private:
+ private:
   RuntimeContext* runtime_context_;
   DISALLOW_COPY_AND_ASSIGN(XWalkDevToolsDelegate);
 };
